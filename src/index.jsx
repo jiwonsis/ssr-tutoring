@@ -17,7 +17,7 @@ if(module.hot) {
     const NextRoot = require('./client/Root').default;
     ReactDOM.render(
       <AppContainer>
-        <Root />
+        <NextRoot/>
       </AppContainer>,
       document.getElementById('root')
     );
