@@ -18,7 +18,6 @@ export default handleActions({
   ...pender({
     type: GET_USERS,
     onSuccess: (state, action) => {
-      console.log(action);
       return {
         data: action.payload.data
       }

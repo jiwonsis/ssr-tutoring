@@ -1,5 +1,6 @@
 import React from 'react';
 import queryString from 'query-string';
+import { Helmet } from 'react-helmet';
 
 const About = ({
   location, match
@@ -7,10 +8,16 @@ const About = ({
   
   const query = queryString.parse(location);
   const detail = query.detail===  'true';
+  const { name } = match.params;
 
   return (
     <div>
       <h2>About {match.params.name}</h2>
+
+      <Helmet>
+        <title>{`About ${name ? name : ''}`}</title>
+      </Helmet>
+
       {detail && 'detail: blahblah'}
     </div>
   );
