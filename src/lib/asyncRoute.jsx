@@ -17,7 +17,7 @@ export default function asyncComponent(getComponent) {
     render() {
       const { Component } = this.state;
       if( Component ) {
-        return <Comment {...this.props} />
+        return <Component {...this.props} />
       }
       return null;
     }

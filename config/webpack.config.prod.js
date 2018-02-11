@@ -244,7 +244,7 @@ module.exports = {
   plugins: [
     new webpack.NormalModuleReplacementPlugin(
       /^pages$/,
-      'pages/index.async.js'
+      'pages/index.async.jsx'
     ),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
